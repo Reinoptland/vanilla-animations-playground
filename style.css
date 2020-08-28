@@ -1,0 +1,68 @@
+/* 
+
+1. Transitions
+    - Element state a.k.a. using pseudoclass
+    - Transition properties
+
+2. Animations
+    - KeyFrames
+
+3. Performance
+    - animatable
+    - recommended properties -> transform & opacity
+
+4. Interactions with JS
+
+// 1. Make a css class with the properties that are going to change
+// 2. Event listener / Handler
+// 3. Handler adds a class to the html element
+
+*/
+
+h1 {
+  color: red;
+  text-align: center;
+  transition: 1s;
+}
+
+h1:hover {
+  transform: scale(2);
+  opacity: 0;
+}
+
+input {
+  border: 1px solid black;
+  transition: 0.5s;
+}
+
+input:focus {
+  border: 6px solid hotpink;
+  transform: scale(1.5);
+}
+
+.green-clock {
+  color: lawngreen;
+  transform: scale(1.2);
+}
+
+body {
+  animation: 8s linear 1s changeBackGround;
+}
+
+@keyframes changeBackGround {
+  0% {
+    background-color: lawngreen;
+  }
+
+  10% {
+    background-color: hotpink;
+  }
+
+  80% {
+    background-color: white;
+  }
+
+  90% {
+    background: lawngreen;
+  }
+}
